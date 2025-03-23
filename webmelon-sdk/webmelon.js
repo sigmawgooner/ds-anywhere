@@ -280,7 +280,7 @@
         // The alternative is to make an AudioWorklet, but I don't know if having a worker run audio would
         // be great for this program.
         const audioSource = WebMelon._internal.emulatorAudioCtx.createBufferSource();
-        const audioProcessor = WebMelon._internal.emulatorAudioCtx.createScriptProcessor(2048, 0, 2);
+        const audioProcessor = WebMelon._internal.emulatorAudioCtx.createScriptProcessor(4096, 0, 2);
         audioProcessor.addEventListener('audioprocess', WebMelon.audio.processAudio);
         audioSource.connect(audioProcessor);
         audioProcessor.connect(WebMelon._internal.emulatorAudioCtx.destination);
